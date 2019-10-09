@@ -2,9 +2,44 @@
 
 learn [stackery](https://www.stackery.io).  Project based on [Stackery Quickstart NodeJS](https://docs.stackery.io/docs/quickstart/quickstart-nodejs/).
 
+
+## Comments (as of 2019-10-09)
+
+* competes with [serverless dashboard](https://serverless.com/dashboard/).  many of the same features.  secrets service, environment management, team/collaboration support
+* says it supports serverless framework (serverless.yml), but SAM seems to be the first class citizen.
+* installs a stack (roles, buckets, CodeBuild project, lambdas, SNS topics, etc.) into your account to link your aws account to the stackery SaaS service.
+* the stackery cli feels heavy due to the number of flags and arguments you need to supply.  e.g. always specifying env and aws profile.
+* documentation feels a bit all over the place.  this may be because the tool doesn't have strong opinions and is favoring flexibility.
+
+## Prerequisites
+
+* docker
+
 ## Session
 
 ```sh
+# ensure docker is running
+
+# install
+brew tap stackery/tap
+brew install stackery-cli
+
+stackery login
+
+# init
+stackery init -n stackery-quickstart
+
+# visual editor
+stackery edit
+
+# deploy
+stackery deploy --interactive-setup
+
+# cd to function directory
+cd src/get
+
+# invoke
+stackery local invoke -e pfeilbr-development --aws-profile admin
 
 ```
 
