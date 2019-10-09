@@ -6,7 +6,7 @@ learn [stackery](https://www.stackery.io).  Project based on [Stackery Quickstar
 ## Comments (as of 2019-10-09)
 
 * competes with [serverless dashboard](https://serverless.com/dashboard/).  many of the same features.  secrets service, environment management, team/collaboration support
-* says it supports serverless framework (serverless.yml), but SAM seems to be the first class citizen.
+* says it supports serverless framework (serverless.yml), but SAM seems to be the first class citizen.  SAM since its based on CF, lags behind in feature support over serverless.  Serverless fills the gaps with custom plugins.
 * installs a stack (roles, buckets, CodeBuild project, lambdas, SNS topics, etc.) into your account to link your aws account to the stackery SaaS service.
 * the stackery cli feels heavy due to the number of flags and arguments you need to supply.  e.g. always specifying env and aws profile.
 * documentation feels a bit all over the place.  this may be because the tool doesn't have strong opinions and is favoring flexibility.
